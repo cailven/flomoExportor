@@ -1,0 +1,61 @@
+/* 复选框容器样式 */
+.flomo-export-checkbox {
+  position: relative;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-left: 10px;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+/* 自定义复选框样式 */
+.flomo-export-checkbox input[type="checkbox"] {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  position: absolute;
+}
+
+/* 复选框外观 */
+.flomo-export-checkbox .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+/* 悬停效果 */
+.flomo-export-checkbox:hover .checkmark {
+  border-color: #64C8BC;
+  box-shadow: 0 0 5px rgba(100, 200, 188, 0.3);
+}
+
+/* 选中状态 */
+.flomo-export-checkbox input:checked + .checkmark {
+  background-color: #64C8BC;
+  border-color: #64C8BC;
+}
+
+/* 对勾图标 */
+.flomo-export-checkbox .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 6px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+/* 显示对勾 */
+.flomo-export-checkbox input:checked + .checkmark:after {
+  display: block;
+} 

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            width: 400px;
+            padding: 15px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #eee;
+        }
+        .title {
+            font-size: 16px;
+            font-weight: 600;
+            color: #333;
+            margin: 0;
+        }
+        .note-count {
+            font-size: 14px;
+            color: #666;
+        }
+        .note-list {
+            max-height: 400px;
+            overflow-y: auto;
+        }
+        .note-item {
+            padding: 10px;
+            border-radius: 4px;
+            background: #f9f9f9;
+            margin-bottom: 8px;
+            font-size: 14px;
+            color: #333;
+            word-break: break-all;
+        }
+        .note-item:hover {
+            background: #f5f5f5;
+        }
+        .empty-state {
+            text-align: center;
+            color: #666;
+            padding: 20px;
+            font-size: 14px;
+        }
+        .export-btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background: #64C8BC;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            margin-top: 15px;
+        }
+        .export-btn:hover {
+            background: #58b4a9;
+        }
+        .export-btn:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1 class="title">已选择的笔记</h1>
+        <span class="note-count">0 条笔记</span>
+    </div>
+    <div class="note-list">
+        <!-- 笔记列表将通过 JavaScript 动态添加 -->
+    </div>
+    <button class="export-btn" id="exportBtn" disabled>导出选中的笔记</button>
+    <script src="popup.js"></script>
+</body>
+</html> 
